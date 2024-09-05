@@ -67,6 +67,7 @@ const { createApp } = Vue
     },
 
     methods:{
+        // sbarriamo un elemento della lista 
         isDone(index){
           if(this.toDoList[index].done === false) {
             this.toDoList[index].done = true;
@@ -75,6 +76,11 @@ const { createApp } = Vue
             this.toDoList[index].done = false;
             this.toDoList[index].className = 'text-decoration-line-through'
         }
+       },
+
+       // metodo per eliminare un item dalla lista
+       deleteItem(index){
+            this.toDoList.splice(index,1);
        },
     }
   }).mount('#app')
