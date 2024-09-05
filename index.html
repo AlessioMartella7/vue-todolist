@@ -29,8 +29,8 @@
                 <!-- lista -->
                 <div class="col-6 offset-3 my-4">
                     <ul class="list-group list-group-flush ">
-                        <li @click="isDone(index)" class="list-group-item fw-fold fs-4"
-                            v-for="(element,index) in toDoList">
+                        <li @click="isDone(index)" v-bind:class="toDoList[index].className"
+                            class=" list-group-item fw-fold fs-4 " v-for="(element,index) in toDoList">
                             {{toDoList[index].todo}}
 
                         </li>

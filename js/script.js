@@ -34,6 +34,7 @@ const { createApp } = Vue
             {
                 todo: 'Clean your room',
                 done: false,
+               
             },
             {
                 todo: 'Make grossery',
@@ -69,8 +70,10 @@ const { createApp } = Vue
         isDone(index){
           if(this.toDoList[index].done === false) {
             this.toDoList[index].done = true;
+            this.toDoList[index].className = '';
         } else {
             this.toDoList[index].done = false;
+            this.toDoList[index].className = 'text-decoration-line-through'
         }
        },
     }
