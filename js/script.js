@@ -89,7 +89,7 @@ const { createApp } = Vue
        // aggiungiamo un nuovo compito alla lista
        addNewTask(newTask){
         if(this.newTasks !== '') {
-            this.toDoList.push({todo: this.newTask, done: false});
+            this.toDoList.push({todo: this.newTask.trim(), done: false});
         }
        },
     }
