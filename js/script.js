@@ -30,6 +30,9 @@ const { createApp } = Vue
     data() {
       return {
 
+        //nuovo compito da aggiungere
+        newTask:'',
+
         toDoList:[
             {
                 todo: 'Clean your room',
@@ -81,6 +84,13 @@ const { createApp } = Vue
        // metodo per eliminare un item dalla lista
        deleteItem(index){
             this.toDoList.splice(index,1);
+       },
+
+       // aggiungiamo un nuovo compito alla lista
+       addNewTask(newTask){
+        if(this.newTasks !== '') {
+            this.toDoList.push({todo: this.newTask, done: false});
+        }
        },
     }
   }).mount('#app')
