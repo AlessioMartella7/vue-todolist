@@ -17,6 +17,34 @@
     <!-- Vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+    <div id="app">
+        <div class="container">
+            <div class="row text-center">
+
+                <!-- intestazione -->
+                <div class="col-12">
+                    <h1 class="fw-fold my-3">To Do List</h1>
+                </div>
+
+                <!-- lista -->
+                <div class="col-6 offset-3 my-4">
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item fw-fold fs-4" v-for="(element,index) in toDoList">
+                            {{toDoList[index].todo}}
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- input field -->
+                <div class="col-12"></div>
+            </div>
+        </div>
+
+
+
+    </div>
+
     <!-- JS -->
     <script src="js/script.js"></script>
 </body>
