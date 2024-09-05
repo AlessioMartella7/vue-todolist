@@ -59,8 +59,19 @@ const { createApp } = Vue
                 todo: 'Kill Bill',
                 done: false,
             },
-
         ],
+
+
       }
+    },
+
+    methods:{
+        isDone(index){
+          if(this.toDoList[index].done === false) {
+            this.toDoList[index].done = true;
+        } else {
+            this.toDoList[index].done = false;
+        }
+       },
     }
   }).mount('#app')
